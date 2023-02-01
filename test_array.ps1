@@ -1,0 +1,6 @@
+$prop = @(
+  'hello'
+  'there'
+  )
+$prop
+

@@ -1,0 +1,4 @@
+MicroSoft.PowerShell.Archive
+MicroSoft.PowerShell.Management
+MicroSoft.PowerShell.Utility
+Pnp.PowerShell
