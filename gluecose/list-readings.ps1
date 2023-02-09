@@ -12,16 +12,16 @@ $Query = "select * from readings"
 
 #SQLite will create Names.SQLite for us
 $sel = Invoke-SqliteQuery -Query $Query -DataSource $Database
-
-Write-Host "after select"
+$sel | ft
+#Write-Host "after select"
 # We have a database, and a table, let's view the table info
-$prag = Invoke-SqliteQuery -DataSource $Database -Query "PRAGMA table_info(READINGS)"
+# $prag = Invoke-SqliteQuery -DataSource $Database -Query "PRAGMA table_info(READINGS)"
 
-Write-Host "after pragma"
-write-host $sel
-write-host $prag
+#Write-Host "after pragma"
+#write-table $sel
+# write-host $prag
 
 "select * from readings;" | sqlite3 ./gw.db
 
-$sel | Get-Member
+# $sel | Get-Member
 
